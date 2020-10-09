@@ -46,13 +46,16 @@ function main() {
     var objectsToDraw = [];
     var objects = [];
 
+    //chroma.hsv=function(h,s,v,a){return new Color(h,s,v,a,"hsv")
+
+
     // Make infos for each object for each object.
     var baseHue = rand(0, 360);
     var numObjects = 200;
     for (var ii = 0; ii < numObjects; ++ii) {
         var object = {
             uniforms: {
-                u_colorMult: chroma.hsv(emod(baseHue + rand(0, 120), 360), rand(0.5, 1), rand(0.5, 1)).gl(),
+                u_colorMult: [0.5, 1, 0.5, 1],
                 u_matrix: m4.identity(),
             },
             translation: [rand(-100, 100), rand(-100, 100), rand(-150, -50)],
