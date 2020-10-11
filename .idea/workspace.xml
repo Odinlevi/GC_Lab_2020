@@ -22,12 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cf87741-6126-49b6-bb38-50cc5b592fe5" name="Default Changelist" comment="frist steps">
+    <list default="true" id="7cf87741-6126-49b6-bb38-50cc5b592fe5" name="Default Changelist" comment="delete chroma">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/chroma.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/webgl-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/webgl-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/m4.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/m4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/primitives.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/primitives.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +57,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vivk_lab" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -83,8 +85,18 @@
       <workItem from="1602156950378" duration="2528000" />
       <workItem from="1602159579556" duration="4211000" />
       <workItem from="1602189472240" duration="30000" />
-      <workItem from="1602228023636" duration="1913000" />
+      <workItem from="1602228023636" duration="14814000" />
+      <workItem from="1602319820594" duration="6738000" />
+      <workItem from="1602409238521" duration="13495000" />
     </task>
+    <task id="LOCAL-00001" summary="delete chroma">
+      <created>1602232949153</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602232949153</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,11 +114,23 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="delete chroma" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete chroma" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602158955402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602158955402" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602232871653">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602232871653" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602243431013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602243431013" />
     <state x="784" y="440" key="Github.CreateGistDialog" timestamp="1602159091019">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -115,10 +139,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602159306355" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602189495203">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602232963411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602189495203" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602232963411" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602159590797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
