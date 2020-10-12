@@ -22,14 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cf87741-6126-49b6-bb38-50cc5b592fe5" name="Default Changelist" comment="added camera html controls">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/m4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/m4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/primitives.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/webgl-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/webgl-utils.js" afterDir="false" />
-    </list>
+    <list default="true" id="7cf87741-6126-49b6-bb38-50cc5b592fe5" name="Default Changelist" comment="final lab 1 &amp; 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +50,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebGl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../final_test" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -106,7 +99,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602490915428</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="final lab 1 &amp; 2">
+      <created>1602527927029</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602527927029</updated>
+    </task>
+    <task id="LOCAL-00004" summary="final lab 1 &amp; 2">
+      <created>1602527969051</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602527969051</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +134,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete chroma" />
     <MESSAGE value="added camera html controls" />
-    <option name="LAST_COMMIT_MESSAGE" value="added camera html controls" />
+    <MESSAGE value="final lab 1 &amp; 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="final lab 1 &amp; 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602158955402">
@@ -142,11 +150,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602515549887" />
-    <state x="617" y="227" key="FileChooserDialogImpl" timestamp="1602493218663">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602528126145">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="617" y="227" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1602493218663" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602243431013" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602528126145" />
     <state x="784" y="440" key="Github.CreateGistDialog" timestamp="1602159091019">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -155,11 +163,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602159306355" />
-    <state x="460" y="209" key="Vcs.Push.Dialog.v2" timestamp="1602490920920">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602527992748">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="209" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602490920920" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602232963411" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602527992748" />
     <state x="648" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602476463510">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
