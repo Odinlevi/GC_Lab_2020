@@ -344,24 +344,6 @@ function main() {
 
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-        //--
-        camera = CameraUpdateValues(camera);
-        var cameraProperties = CalculateCamera(gl, camera, degToRad(1));
-        //--
-
-        // Compute the camera's matrix using look at.
-        var target = [0, 0, 0];
-        var up = [0, 1, 0];
-        var cameraMatrix = m4.lookAt(cameraProperties.cameraPosition, cameraProperties.target, cameraProperties.up);
-
-        //console.log(cameraProperties.target)
-
-        // Make a view matrix from the camera matrix.
-        var viewMatrix = m4.inverse(cameraMatrix);
-
-        var viewProjectionMatrix = m4.multiply(cameraProperties.projectionMatrix, viewMatrix);
-
-        /*
         camera = CameraUpdateValues(camera);
 
         var cameraProperties = CalculateCamera(gl, camera, degToRad(1));
@@ -371,7 +353,7 @@ function main() {
         var viewMatrix = m4.inverse(cameraMatrix);
 
         var viewProjectionMatrix = m4.multiply(cameraProperties.projectionMatrix, viewMatrix);
-        */
+
         objectsToDraw[0].uniforms.u_matrix = computeMatrix(viewProjectionMatrix, TranslationCubeValue(), RotationCubeValue(),ScalingCubeValue());
         objectsToDraw[0].shouldBeDrawn = AddElementCube();
         objectsToDraw[1].uniforms.u_matrix = computeMatrix(viewProjectionMatrix, TranslationConeValue(), RotationConeValue(), ScalingConeValue());
