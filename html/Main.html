@@ -193,17 +193,17 @@
                     </tr>
                     <tr style="text-align: center;" id="row11">
                         <td>
-                            <input value="1" min="1" max="1000" step="10" type="range" id="zNear range" oninput="ScalingCubeValue()">
+                            <input value="1" min="1" max="1000" step="1" type="range" id="zNear range" oninput="zNearCameraValue()">
                             <br>
                             <label>zNear: </label><input value="1" type="text" id="zNear text" size="1">
                         </td>
                         <td>
-                            <input value="500" min="1" max="1500" step="10" type="range" id="zFar range" oninput="ScalingConeValue()">
+                            <input value="2000" min="1" max="4000" step="1" type="range" id="zFar range" oninput="zFarCameraValue()">
                             <br>
                             <label>zFar: </label><input value="500" type="text" id="zFar text" size="1">
                         </td>
                         <td>
-                            <input value="60" min="1" max="180" step="1" type="range" id="FOV range" oninput="ScalingSphereValue()">
+                            <input value="60" min="1" max="180" step="1" type="range" id="FOV range" oninput="FOVCameraValue()">
                             <br>
                             <label>FOV: </label><input value="60" type="text" id="FOV text" size="1">
                         </td>
@@ -215,19 +215,19 @@
                     </tr>
                     <tr style="text-align: center;" id="row13">
                         <td>
-                            <input value="0" min="-1000" max="1000" step="10" type="range" id="camera x translation range" oninput="ScalingCubeValue()">
+                            <input value="0" min="-1000" max="1000" step="1" type="range" id="translation camera x range" oninput="TranslationCameraValue()">
                             <br>
-                            <label>x: </label><input value="0" type="text" id="camera x translation text" size="1">
+                            <label>x: </label><input value="0" type="text" id="translation camera x text" size="1">
                         </td>
                         <td>
-                            <input value="0" min="-1000" max="1000" step="10" type="range" id="camera y translation range" oninput="ScalingConeValue()">
+                            <input value="0" min="-1000" max="1000" step="1" type="range" id="translation camera y range" oninput="TranslationCameraValue()">
                             <br>
-                            <label>y: </label><input value="0" type="text" id="camera y translation text" size="1">
+                            <label>y: </label><input value="0" type="text" id="translation camera y text" size="1">
                         </td>
                         <td>
-                            <input value="100" min="-1000" max="1800" step="1" type="range" id="camera z translation range" oninput="ScalingSphereValue()">
+                            <input value="100" min="-1000" max="1800" step="1" type="range" id="translation camera z range" oninput="TranslationCameraValue()">
                             <br>
-                            <label>z: </label><input value="0" type="text" id="camera z translation text" size="1">
+                            <label>z: </label><input value="0" type="text" id="translation camera z text" size="1">
                         </td>
                     </tr>
                     <tr style="text-align: center;" id="row14">
@@ -237,19 +237,19 @@
                     </tr>
                     <tr style="text-align: center;" id="row15">
                         <td>
-                            <input value="0" min="0" max="360" step="1" type="range" id="camera x rotation range" oninput="ScalingCubeValue()">
+                            <input value="0" min="0" max="360" step="1" type="range" id="rotation camera x range" oninput="RotationCameraValue()">
                             <br>
-                            <label>x: </label><input value="0" type="text" id="camera x rotation text" size="1">
+                            <label>x: </label><input value="0" type="text" id="rotation camera x text" size="1">
                         </td>
                         <td>
-                            <input value="0" min="0" max="360" step="1" type="range" id="camera y rotation range" oninput="ScalingConeValue()">
+                            <input value="0" min="0" max="360" step="1" type="range" id="rotation camera y range" oninput="RotationCameraValue()">
                             <br>
-                            <label>y: </label><input value="0" type="text" id="camera y rotation text" size="1">
+                            <label>y: </label><input value="0" type="text" id="rotation camera y text" size="1">
                         </td>
                         <td>
-                            <input value="0" min="0" max="360" step="1" type="range" id="camera z rotation range" oninput="ScalingSphereValue()">
+                            <input value="0" min="0" max="360" step="1" type="range" id="rotation camera z range" oninput="RotationCameraValue()">
                             <br>
-                            <label>z: </label><input value="0" type="text" id="camera z text" size="1">
+                            <label>z: </label><input value="0" type="text" id="rotation camera z text" size="1">
                         </td>
                     </tr>
                 </table>
@@ -292,9 +292,10 @@ void main() {
 }
 </script>
 
-<script src="../utils/webgl-utils.js"></script>
-<script src="../utils/m4.js"></script>
-<script src="../utils/primitives.js"></script>
+<script src="../src/webgl-utils.js"></script>
+<script src="../src/m4.js"></script>
+<script src="../src/primitives.js"></script>
+<script src="../src/v3.js"></script>
 <script src="../src/Main.js"></script>
 
 </body>

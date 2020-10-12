@@ -25,6 +25,10 @@
     <list default="true" id="7cf87741-6126-49b6-bb38-50cc5b592fe5" name="Default Changelist" comment="added camera html controls">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/m4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/m4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/primitives.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/webgl-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/webgl-utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +70,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Maxim\OneDrive - Technical University of Moldova\Learning\Subjects\Computer Graphics\Lab_Main\utils" />
       <recent name="C:\Users\Maxim\OneDrive - Technical University of Moldova\Learning\Subjects\Computer Graphics\Lab_Main\src" />
+      <recent name="C:\Users\Maxim\OneDrive - Technical University of Moldova\Learning\Subjects\Computer Graphics\Lab_Main\utils" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -134,6 +138,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602232871653" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1602515549887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602515549887" />
     <state x="617" y="227" key="FileChooserDialogImpl" timestamp="1602493218663">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -157,6 +165,10 @@
     </state>
     <state x="648" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1602476463510" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602159590797" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1602526895925">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602526895925" />
     <state x="463" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1602490587257">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

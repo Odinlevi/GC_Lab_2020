@@ -150,6 +150,54 @@ function AddElementSphere() {
         return true;
 }
 
+function zNearCameraValue() {
+    var r = document.getElementById('zNear range');
+    var i = document.getElementById('zNear text');
+    i.value = r.value;
+    return parseFloat(i.value);
+}
+
+function zFarCameraValue() {
+    var r = document.getElementById('zFar range');
+    var i = document.getElementById('zFar text');
+    i.value = r.value;
+    return parseFloat(i.value);
+}
+
+function FOVCameraValue() {
+    var r = document.getElementById('FOV range');
+    var i = document.getElementById('FOV text');
+    i.value = r.value;
+    return parseFloat(i.value);
+}
+
+function TranslationCameraValue() {
+    var r_x = document.getElementById('translation camera x range');
+    var r_y = document.getElementById('translation camera y range');
+    var r_z = document.getElementById('translation camera z range');
+    var i_x = document.getElementById('translation camera x text');
+    var i_y = document.getElementById('translation camera y text');
+    var i_z = document.getElementById('translation camera z text');
+    i_x.value = r_x.value;
+    i_y.value = r_y.value;
+    i_z.value = r_z.value;
+    return [parseFloat(i_x.value), parseFloat(i_y.value), parseFloat(i_z.value)];
+}
+
+function RotationCameraValue() {
+    var r_x = document.getElementById('rotation camera x range');
+    var r_y = document.getElementById('rotation camera y range');
+    var r_z = document.getElementById('rotation camera z range');
+    var i_x = document.getElementById('rotation camera x text');
+    var i_y = document.getElementById('rotation camera y text');
+    var i_z = document.getElementById('rotation camera z text');
+    i_x.value = r_x.value;
+    i_y.value = r_y.value;
+    i_z.value = r_z.value;
+    return [parseFloat(i_x.value), parseFloat(i_y.value), parseFloat(i_z.value)];
+}
+
+
 function CreateCubeInfo(gl, programInfo, color, translation) {
     var object = {
         programInfo: programInfo,
@@ -161,7 +209,6 @@ function CreateCubeInfo(gl, programInfo, color, translation) {
         translation: translation,
         shouldBeDrawn: AddElementCube()
     };
-    console.log(object.bufferInfo);
     return object;
 }
 
@@ -195,6 +242,60 @@ function CreateSphereInfo(gl, programInfo, color, translation) {
     return object;
 }
 
+function CameraInitialize() {
+    var camera = {
+        zNear: 1,
+        zFar: 2000,
+        fov: 60,
+        position: [0, 0, 100],
+        rotation: [0, 0, 0],
+        targetSub: [0, 0, -100],
+        //target: [0, 0, 0],
+        up: new v3(0, 1, 0)
+    }
+    return camera
+}
+
+function CameraUpdateValues(camera) {
+    camera.zNear = zNearCameraValue();
+    camera.zFar = zFarCameraValue();
+    camera.fov = FOVCameraValue();
+    camera.position = TranslationCameraValue();
+    camera.rotation = RotationCameraValue();
+    return camera;
+}
+
+function CalculateCamera(gl, camera, degToRad) {
+    const fov = camera.fov * degToRad;
+    const cPosition = new v3(camera.position[0], camera.position[1], camera.position[2]);
+
+    const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
+    const projectionMatrix = m4.perspective(fov, aspect, camera.zNear, camera.zFar);
+
+    const cTarget = new v3(
+        cPosition.x + camera.targetSub[0],
+        cPosition.y + camera.targetSub[1],
+        cPosition.z + camera.targetSub[2]
+    );
+
+    const up = v3.copy(camera.up);
+
+    cTarget.xRotateAround(camera.rotation[0] * degToRad, cPosition);
+    console.log(cTarget);
+    cTarget.yRotateAround(camera.rotation[1] * degToRad, cPosition);
+    console.log(cTarget);
+    up.zRotateAround(camera.rotation[2] * degToRad, v3.zero());
+
+    var cameraProperties = {
+        cameraPosition: camera.position,
+        target: cTarget.toArray(),
+        up: up.toArray(),
+        projectionMatrix: projectionMatrix
+    }
+
+    return cameraProperties;
+}
+
 function main() {
 
     var objectsToDraw = [];
@@ -209,10 +310,6 @@ function main() {
     function degToRad(d) {
         return d * Math.PI / 180;
     }
-
-    var cameraAngleRadians = degToRad(0);
-    var fieldOfViewRadians = degToRad(60);
-    var cameraHeight = 50;
 
     // Create info about 3 different figures
     objectsToDraw.push(CreateCubeInfo(gl, programInfo, [0.5, 1, 0.5, 1], [0, 0, 0]));
@@ -233,6 +330,8 @@ function main() {
         return matrix;
     }
 
+    var camera = CameraInitialize();
+
     requestAnimationFrame(drawScene);
 
     function drawScene() {
@@ -245,19 +344,34 @@ function main() {
 
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-        var aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
-        var projectionMatrix =
-            m4.perspective(fieldOfViewRadians, aspect, 1, 2000);
+        //--
+        camera = CameraUpdateValues(camera);
+        var cameraProperties = CalculateCamera(gl, camera, degToRad(1));
+        //--
 
-        var cameraPosition = [0, 0, 150];
+        // Compute the camera's matrix using look at.
         var target = [0, 0, 0];
         var up = [0, 1, 0];
-        var cameraMatrix = m4.lookAt(cameraPosition, target, up);
+        var cameraMatrix = m4.lookAt(cameraProperties.cameraPosition, cameraProperties.target, cameraProperties.up);
+
+        //console.log(cameraProperties.target)
+
+        // Make a view matrix from the camera matrix.
+        var viewMatrix = m4.inverse(cameraMatrix);
+
+        var viewProjectionMatrix = m4.multiply(cameraProperties.projectionMatrix, viewMatrix);
+
+        /*
+        camera = CameraUpdateValues(camera);
+
+        var cameraProperties = CalculateCamera(gl, camera, degToRad(1));
+
+        var cameraMatrix = m4.lookAt(cameraProperties.cameraPosition, cameraProperties.target, cameraProperties.up);
 
         var viewMatrix = m4.inverse(cameraMatrix);
 
-        var viewProjectionMatrix = m4.multiply(projectionMatrix, viewMatrix);
-
+        var viewProjectionMatrix = m4.multiply(cameraProperties.projectionMatrix, viewMatrix);
+        */
         objectsToDraw[0].uniforms.u_matrix = computeMatrix(viewProjectionMatrix, TranslationCubeValue(), RotationCubeValue(),ScalingCubeValue());
         objectsToDraw[0].shouldBeDrawn = AddElementCube();
         objectsToDraw[1].uniforms.u_matrix = computeMatrix(viewProjectionMatrix, TranslationConeValue(), RotationConeValue(), ScalingConeValue());
