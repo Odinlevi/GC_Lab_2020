@@ -281,9 +281,7 @@ function CalculateCamera(gl, camera, degToRad) {
     const up = v3.copy(camera.up);
 
     cTarget.xRotateAround(camera.rotation[0] * degToRad, cPosition);
-    console.log(cTarget);
     cTarget.yRotateAround(camera.rotation[1] * degToRad, cPosition);
-    console.log(cTarget);
     up.zRotateAround(camera.rotation[2] * degToRad, v3.zero());
 
     var cameraProperties = {
