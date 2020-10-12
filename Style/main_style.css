@@ -1,0 +1,8 @@
+.left {
+    background:#e6e6e6;
+}
+canvas {
+    width: 70vw;
+    height: 100vh;
+    display: block;
+}
