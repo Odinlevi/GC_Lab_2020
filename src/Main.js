@@ -219,14 +219,18 @@ function main() {
     objectsToDraw.push(CreateConeInfo(gl, programInfo, [0.5, 1, 0.5, 1], [50, 0, 0]));
     objectsToDraw.push(CreateSphereInfo(gl, programInfo, [0.5, 1, 0.5, 1], [-50, 0, 0]));
 
-    function computeMatrix(viewProjectionMatrix, translation, rotation) {
+    function computeMatrix(viewProjectionMatrix, translation, rotation, scale) {
         var matrix = m4.translate(viewProjectionMatrix,
             translation[0],
             translation[1],
             translation[2]);
         matrix = m4.xRotate(matrix, rotation[0]);
-        matrix = m4.yRotate(matrix, rotation[1])
-        return m4.zRotate(matrix, rotation[2]);
+        matrix = m4.yRotate(matrix, rotation[1]);
+        matrix = m4.zRotate(matrix, rotation[2]);
+
+        matrix = m4.scale(matrix, scale, scale, scale);
+
+        return matrix;
     }
 
     requestAnimationFrame(drawScene);
@@ -254,11 +258,11 @@ function main() {
 
         var viewProjectionMatrix = m4.multiply(projectionMatrix, viewMatrix);
 
-        objectsToDraw[0].uniforms.u_matrix = computeMatrix(viewProjectionMatrix, TranslationCubeValue(), RotationCubeValue());
+        objectsToDraw[0].uniforms.u_matrix = computeMatrix(viewProjectionMatrix, TranslationCubeValue(), RotationCubeValue(),ScalingCubeValue());
         objectsToDraw[0].shouldBeDrawn = AddElementCube();
-        objectsToDraw[1].uniforms.u_matrix = computeMatrix(viewProjectionMatrix, TranslationConeValue(), RotationConeValue());
+        objectsToDraw[1].uniforms.u_matrix = computeMatrix(viewProjectionMatrix, TranslationConeValue(), RotationConeValue(), ScalingConeValue());
         objectsToDraw[1].shouldBeDrawn = AddElementCone();
-        objectsToDraw[2].uniforms.u_matrix = computeMatrix(viewProjectionMatrix, TranslationSphereValue(), RotationSphereValue());
+        objectsToDraw[2].uniforms.u_matrix = computeMatrix(viewProjectionMatrix, TranslationSphereValue(), RotationSphereValue(), ScalingSphereValue());
         objectsToDraw[2].shouldBeDrawn = AddElementSphere();
         // Draw the objects
 

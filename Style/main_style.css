@@ -1,8 +1,19 @@
 .left {
     background:#e6e6e6;
 }
+
 canvas {
     width: 70vw;
     height: 100vh;
     display: block;
+}
+
+.scrollit {
+    overflow:scroll;
+    overflow-x: hidden;
+    height:100vh;
+}
+
+body {
+    margin: 0;
 }

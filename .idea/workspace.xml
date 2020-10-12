@@ -24,11 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7cf87741-6126-49b6-bb38-50cc5b592fe5" name="Default Changelist" comment="delete chroma">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Style/main_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style/main_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/m4.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/m4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/primitives.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/primitives.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vivk_lab" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HTML" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -88,6 +86,8 @@
       <workItem from="1602228023636" duration="14814000" />
       <workItem from="1602319820594" duration="6738000" />
       <workItem from="1602409238521" duration="13495000" />
+      <workItem from="1602476271363" duration="269000" />
+      <workItem from="1602476586792" duration="6268000" />
     </task>
     <task id="LOCAL-00001" summary="delete chroma">
       <created>1602232949153</created>
@@ -127,9 +127,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602232871653" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602243431013">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="617" y="227" key="FileChooserDialogImpl" timestamp="1602484836870">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="617" y="227" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1602484836870" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602243431013" />
     <state x="784" y="440" key="Github.CreateGistDialog" timestamp="1602159091019">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -143,9 +144,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602232963411" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602159590797">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="648" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602476463510">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="648" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1602476463510" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602159590797" />
+    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1602490587257">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1602490587257" />
   </component>
 </project>

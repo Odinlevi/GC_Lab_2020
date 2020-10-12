@@ -10,182 +10,250 @@
 <table id="main" class="column-full-screen">
     <tr id="container">
         <td colspan="3" id="left" class="left">
-            <table style="text-align:center;" id="edit">
-                <tr id="row1">
-                    <td id="row1 col1">
-                        <img id="img cube" height="50" src="../pictures/Download-Cube-PNG-Transparent-Image.png" width="50">
-                    </td>
-                    <td id="row1 col2">
-                        <img id="img cone" height="50" src="../pictures/kindpng_1813840.png" width="50">
-                    </td>
-                    <td id="row1 col3">
+            <div class="scrollit">
+                <table style="text-align:center;" id="edit">
+                    <tr id="row1">
+                        <td id="row1 col1">
+                            <img id="img cube" height="50" src="../pictures/Download-Cube-PNG-Transparent-Image.png" width="50">
+                        </td>
+                        <td id="row1 col2">
+                            <img id="img cone" height="50" src="../pictures/kindpng_1813840.png" width="50">
+                        </td>
+                        <td id="row1 col3">
 
-                        <img id="img sphere" height="50" src="../pictures/toppng.com-sphere-1024x1024.png" width="50">
-                    </td>
-                </tr>
-                <tr id="row2">
-                    <td colspan="3" id="col1">
-                        <p align="middle">Translation:</p>
-                    </td>
-                </tr>
-                <tr id="row3">
-                    <td colspan="3">
-                        <table style="text-align:center;">
-                            <tr>
-                                <td>
-                                    <input value="-50" min="-100" max="100" type="range" id="translation cube x range" oninput="TranslationCubeValue()">
-                                    <br>
-                                    <label>x:     </label> <input value="-50" type="text" id="translation cube x text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-100" max="100" type="range" id="translation cone x range" oninput="TranslationConeValue()">
-                                    <br>
-                                    <label>x:     </label><input value="0" type="text" id="translation cone x text" size="1">
-                                </td>
-                                <td>
-                                    <input value="50" min="-100" max="100" type="range" id="translation sphere x range" oninput="TranslationSphereValue()">
-                                    <br>
-                                    <label>x:     </label><input value="50" type="text" id="translation sphere x text" size="1">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input value="0" min="-100" max="100" type="range" id="translation cube y range" oninput="TranslationCubeValue()">
-                                    <br>
-                                    <label>y:     </label> <input value="0" type="text" id="translation cube y text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-100" max="100" type="range" id="translation cone y range" oninput="TranslationConeValue()">
-                                    <br>
-                                    <label>y:     </label><input value="0" type="text" id="translation cone y text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-100" max="100" type="range" id="translation sphere y range" oninput="TranslationSphereValue()">
-                                    <br>
-                                    <label>y:     </label><input value="0" type="text" id="translation sphere y text" size="1">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input value="0" min="-100" max="100" type="range" id="translation cube z range" oninput="TranslationCubeValue()">
-                                    <br>
-                                    <label>z:     </label> <input value="0" type="text" id="translation cube z text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-100" max="100" type="range" id="translation cone z range" oninput="TranslationConeValue()">
-                                    <br>
-                                    <label>z:     </label><input value="0" type="text" id="translation cone z text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-100" max="100" type="range" id="translation sphere z range" oninput="TranslationSphereValue()">
-                                    <br>
-                                    <label>z:     </label><input value="0" type="text" id="translation sphere z text" size="1">
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr id="row4">
-                    <td colspan="3" id="row4 col1">
-                        Rotation:
-                    </td>
-                </tr>
-                <tr id="row5">
-                    <td colspan="3">
-                        <table style="text-align:center;">
-                            <tr>
-                                <td>
-                                    <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cube x range" oninput="RotationCubeValue()">
-                                    <br>
-                                    <label>x:     </label> <input value="0"  type="text" id="rotation cube x text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cone x range" oninput="RotationConeValue()">
-                                    <br>
-                                    <label>x:     </label><input value="0" type="text" id="rotation cone x text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation sphere x range" oninput="RotationSphereValue()">
-                                    <br>
-                                    <label>x:     </label><input value="0" type="text" id="rotation sphere x text" size="1">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cube y range" oninput="RotationCubeValue()">
-                                    <br>
-                                    <label>y:     </label> <input value="0" type="text" id="rotation cube y text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cone y range" oninput="RotationConeValue()">
-                                    <br>
-                                    <label>y:     </label><input value="0" type="text" id="rotation cone y text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation sphere y range" oninput="RotationSphereValue()">
-                                    <br>
-                                    <label>y:     </label><input value="0" type="text" id="rotation sphere y text" size="1">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cube z range" oninput="RotationCubeValue()">
-                                    <br>
-                                    <label>z:     </label> <input value="0" type="text" id="rotation cube z text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cone z range" oninput="RotationConeValue()">
-                                    <br>
-                                    <label>z:     </label><input value="0" type="text" id="rotation cone z text" size="1">
-                                </td>
-                                <td>
-                                    <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation sphere z range" oninput="RotationSphereValue()">
-                                    <br>
-                                    <label>z:     </label><input value="0" type="text" id="rotation sphere z text" size="1">
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr id="row6">
-                    <td colspan="3" id="row6 col1">
-                        <p align="middle">Scaling:</p>
-                    </td>
-                </tr>
-                <tr style="text-align: center" id="row7">
-                    <td>
-                        <input value="0" min="-100" max="100" type="range" id="scaling cube range" oninput="ScalingCubeValue()">
-                        <br>
-                        <input value="0" type="text" id="scaling cube text" size="1">
-                    </td>
-                    <td>
-                        <input value="0" min="-100" max="100" type="range" id="scaling cone range" oninput="ScalingConeValue()">
-                        <br>
-                        <input value="0" type="text" id="scaling cone text" size="1">
-                    </td>
-                    <td>
-                        <input value="0" min="-100" max="100" type="range" id="scaling sphere range" oninput="ScalingSphereValue()">
-                        <br>
-                        <input value="0" type="text" id="scaling sphere text" size="1">
-                    </td>
-                </tr>
-                <tr id="row8">
-                    <td colspan="3" id="row8 col1">
-                        <p align="middle">Add element:</p>
-                    </td>
-                </tr>
-                <tr id="row9">
-                    <td style="text-align: center">
-                        <input value=" + " type="button" id="add cube" onclick="AddElementCubeButton()">
-                    </td>
-                    <td style="text-align: center">
-                        <input value=" + " type="button" id="add cone" onclick="AddElementConeButton()">
-                    </td>
-                    <td style="text-align: center">
-                        <input value=" + " type="button" id="add sphere" onclick="AddElementSphereButton()">
-                    </td>
-                </tr>
-            </table>
+                            <img id="img sphere" height="50" src="../pictures/toppng.com-sphere-1024x1024.png" width="50">
+                        </td>
+                    </tr>
+                    <tr id="row2">
+                        <td style="text-align: center; padding-top: 15px" colspan="3" id="row8 col1">
+                            Add element:
+                        </td>
+                    </tr>
+                    <tr id="row3">
+                        <td style="text-align: center;">
+                            <input value=" + " type="button" id="add cube" onclick="AddElementCubeButton()">
+                        </td>
+                        <td style="text-align: center">
+                            <input value=" + " type="button" id="add cone" onclick="AddElementConeButton()">
+                        </td>
+                        <td style="text-align: center">
+                            <input value=" + " type="button" id="add sphere" onclick="AddElementSphereButton()">
+                        </td>
+                    </tr>
+                    <tr id="row4">
+                        <td style="text-align: center; padding-top: 15px" colspan="3" id="col1">
+                            Translation:
+                        </td>
+                    </tr>
+                    <tr id="row5">
+                        <td colspan="3">
+                            <table style="text-align:center;">
+                                <tr>
+                                    <td>
+                                        <input value="-50" min="-100" max="100" type="range" id="translation cube x range" oninput="TranslationCubeValue()">
+                                        <br>
+                                        <label>x:     </label> <input value="-50" type="text" id="translation cube x text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-100" max="100" type="range" id="translation cone x range" oninput="TranslationConeValue()">
+                                        <br>
+                                        <label>x:     </label><input value="0" type="text" id="translation cone x text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="50" min="-100" max="100" type="range" id="translation sphere x range" oninput="TranslationSphereValue()">
+                                        <br>
+                                        <label>x:     </label><input value="50" type="text" id="translation sphere x text" size="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input value="0" min="-100" max="100" type="range" id="translation cube y range" oninput="TranslationCubeValue()">
+                                        <br>
+                                        <label>y:     </label> <input value="0" type="text" id="translation cube y text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-100" max="100" type="range" id="translation cone y range" oninput="TranslationConeValue()">
+                                        <br>
+                                        <label>y:     </label><input value="0" type="text" id="translation cone y text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-100" max="100" type="range" id="translation sphere y range" oninput="TranslationSphereValue()">
+                                        <br>
+                                        <label>y:     </label><input value="0" type="text" id="translation sphere y text" size="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input value="0" min="-100" max="100" type="range" id="translation cube z range" oninput="TranslationCubeValue()">
+                                        <br>
+                                        <label>z:     </label> <input value="0" type="text" id="translation cube z text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-100" max="100" type="range" id="translation cone z range" oninput="TranslationConeValue()">
+                                        <br>
+                                        <label>z:     </label><input value="0" type="text" id="translation cone z text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-100" max="100" type="range" id="translation sphere z range" oninput="TranslationSphereValue()">
+                                        <br>
+                                        <label>z:     </label><input value="0" type="text" id="translation sphere z text" size="1">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr id="row6">
+                        <td colspan="3" id="row5 col1">
+                            Rotation:
+                        </td>
+                    </tr>
+                    <tr id="row7">
+                        <td colspan="3">
+                            <table style="text-align:center;">
+                                <tr>
+                                    <td>
+                                        <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cube x range" oninput="RotationCubeValue()">
+                                        <br>
+                                        <label>x:     </label> <input value="0"  type="text" id="rotation cube x text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cone x range" oninput="RotationConeValue()">
+                                        <br>
+                                        <label>x:     </label><input value="0" type="text" id="rotation cone x text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation sphere x range" oninput="RotationSphereValue()">
+                                        <br>
+                                        <label>x:     </label><input value="0" type="text" id="rotation sphere x text" size="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cube y range" oninput="RotationCubeValue()">
+                                        <br>
+                                        <label>y:     </label> <input value="0" type="text" id="rotation cube y text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cone y range" oninput="RotationConeValue()">
+                                        <br>
+                                        <label>y:     </label><input value="0" type="text" id="rotation cone y text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation sphere y range" oninput="RotationSphereValue()">
+                                        <br>
+                                        <label>y:     </label><input value="0" type="text" id="rotation sphere y text" size="1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cube z range" oninput="RotationCubeValue()">
+                                        <br>
+                                        <label>z:     </label> <input value="0" type="text" id="rotation cube z text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation cone z range" oninput="RotationConeValue()">
+                                        <br>
+                                        <label>z:     </label><input value="0" type="text" id="rotation cone z text" size="1">
+                                    </td>
+                                    <td>
+                                        <input value="0" min="-6.3" max="6.3" step="0.1" type="range" id="rotation sphere z range" oninput="RotationSphereValue()">
+                                        <br>
+                                        <label>z:     </label><input value="0" type="text" id="rotation sphere z text" size="1">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr id="row8">
+                        <td style="text-align: center" colspan="3" id="row6 col1">
+                            Scaling:
+                        </td>
+                    </tr>
+                    <tr style="text-align: center;" id="row9">
+                        <td>
+                            <input value="1" min="0" max="5" step="0.1" type="range" id="scaling cube range" oninput="ScalingCubeValue()">
+                            <br>
+                            <input value="1" type="text" id="scaling cube text" size="1">
+                        </td>
+                        <td>
+                            <input value="1" min="0" max="5" step="0.1" type="range" id="scaling cone range" oninput="ScalingConeValue()">
+                            <br>
+                            <input value="1" type="text" id="scaling cone text" size="1">
+                        </td>
+                        <td>
+                            <input value="1" min="0" max="5" step="0.1" type="range" id="scaling sphere range" oninput="ScalingSphereValue()">
+                            <br>
+                            <input value="1" type="text" id="scaling sphere text" size="1">
+                        </td>
+                    </tr>
+                    <tr style="text-align: center" id="row10">
+                        <td style="padding-top: 20px" colspan="3">
+                            Camera:
+                        </td>
+                    </tr>
+                    <tr style="text-align: center;" id="row11">
+                        <td>
+                            <input value="100" min="1" max="1000" step="10" type="range" id="zNear range" oninput="ScalingCubeValue()">
+                            <br>
+                            <label>zNear: </label><input value="100" type="text" id="zNear text" size="1">
+                        </td>
+                        <td>
+                            <input value="500" min="1" max="1500" step="10" type="range" id="zFar range" oninput="ScalingConeValue()">
+                            <br>
+                            <label>zFar: </label><input value="500" type="text" id="zFar text" size="1">
+                        </td>
+                        <td>
+                            <input value="60" min="1" max="180" step="1" type="range" id="FOV range" oninput="ScalingSphereValue()">
+                            <br>
+                            <label>FOV: </label><input value="1" type="text" id="FOV text" size="1">
+                        </td>
+                    </tr>
+                    <tr style="text-align: center;" id="row12">
+                        <td style="padding-top: 5px" colspan="3">
+                            Translation:
+                        </td>
+                    </tr>
+                    <tr style="text-align: center;" id="row13">
+                        <td>
+                            <input value="100" min="1" max="1000" step="10" type="range" id="camera x translation range" oninput="ScalingCubeValue()">
+                            <br>
+                            <label>x: </label><input value="100" type="text" id="camera x translation text" size="1">
+                        </td>
+                        <td>
+                            <input value="500" min="1" max="1500" step="10" type="range" id="camera y translation range" oninput="ScalingConeValue()">
+                            <br>
+                            <label>y: </label><input value="500" type="text" id="camera y translation text" size="1">
+                        </td>
+                        <td>
+                            <input value="60" min="1" max="180" step="1" type="range" id="camera z translation range" oninput="ScalingSphereValue()">
+                            <br>
+                            <label>z: </label><input value="1" type="text" id="camera z translation text" size="1">
+                        </td>
+                    </tr>
+                    <tr style="text-align: center;" id="row14">
+                        <td style="padding-top: 5px" colspan="3">
+                            Rotation:
+                        </td>
+                    </tr>
+                    <tr style="text-align: center;" id="row15">
+                        <td>
+                            <input value="100" min="1" max="1000" step="10" type="range" id="camera x rotation range" oninput="ScalingCubeValue()">
+                            <br>
+                            <label>x: </label><input value="100" type="text" id="camera x rotation text" size="1">
+                        </td>
+                        <td>
+                            <input value="500" min="1" max="1500" step="10" type="range" id="camera y rotation range" oninput="ScalingConeValue()">
+                            <br>
+                            <label>y: </label><input value="500" type="text" id="camera y rotation text" size="1">
+                        </td>
+                        <td>
+                            <input value="60" min="1" max="180" step="1" type="range" id="camera z rotation range" oninput="ScalingSphereValue()">
+                            <br>
+                            <label>z: </label><input value="1" type="text" id="camera z text" size="1">
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </td>
         <td id="right">
             <canvas id="canvas"></canvas>
@@ -223,9 +291,6 @@ void main() {
    gl_FragColor = v_color * u_colorMult;
 }
 </script>
-
-
-
 
 <script src="../utils/webgl-utils.js"></script>
 <script src="../utils/m4.js"></script>
